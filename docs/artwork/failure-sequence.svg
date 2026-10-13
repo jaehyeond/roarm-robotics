@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<g font-family="Arial, sans-serif">
+<text x="64" y="90" font-size="46" fill="#172438" font-weight="700">Observed release failure</text>
+<text x="64" y="148" font-size="28" fill="#172438">Qualitative behavior in a recorded PPO trajectory replay.</text>
+<text x="64" y="210" font-size="26" fill="#176c70" font-weight="700">OBSERVED SEQUENCE</text>
+<rect x="64.0" y="230" width="334.25" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="84.0" y="278" font-size="27" fill="#172438" font-weight="700">Grasp</text>
+<text x="84.0" y="315" font-size="24" fill="#172438">Object held</text>
+<path d="M 406.25 319 H 435.25 M 425.25 311 L 435.25 319 L 425.25 327" fill="none" stroke="#176c70" stroke-width="3"/>
+<rect x="443.25" y="230" width="334.25" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="463.25" y="278" font-size="27" fill="#172438" font-weight="700">Move</text>
+<text x="463.25" y="315" font-size="24" fill="#172438">Toward the target</text>
+<path d="M 785.5 319 H 814.5 M 804.5 311 L 814.5 319 L 804.5 327" fill="none" stroke="#176c70" stroke-width="3"/>
+<rect x="822.5" y="230" width="334.25" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="842.5" y="278" font-size="27" fill="#172438" font-weight="700">Remain closed</text>
+<text x="842.5" y="315" font-size="24" fill="#172438">Object still held</text>
+<path d="M 1164.75 319 H 1193.75 M 1183.75 311 L 1193.75 319 L 1183.75 327" fill="none" stroke="#176c70" stroke-width="3"/>
+<rect x="1201.75" y="230" width="334.25" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="1221.75" y="278" font-size="27" fill="#172438" font-weight="700">Release incomplete</text>
+<text x="1221.75" y="315" font-size="24" fill="#172438">Task unfinished</text>
+<text x="64" y="495" font-size="26" fill="#176c70" font-weight="700">DIAGNOSIS</text>
+<rect x="64.0" y="515" width="460.6666666666667" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="84.0" y="563" font-size="27" fill="#172438" font-weight="700">Observed actions</text>
+<text x="84.0" y="600" font-size="24" fill="#172438">Inspect the trajectory</text>
+<path d="M 532.6666666666667 604 H 561.6666666666667 M 551.6666666666667 596 L 561.6666666666667 604 L 551.6666666666667 612" fill="none" stroke="#176c70" stroke-width="3"/>
+<rect x="569.6666666666667" y="515" width="460.6666666666667" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="589.6666666666667" y="563" font-size="27" fill="#172438" font-weight="700">Reward terms</text>
+<text x="589.6666666666667" y="600" font-size="24" fill="#172438">Compare with behavior</text>
+<path d="M 1038.3333333333335 604 H 1067.3333333333335 M 1057.3333333333335 596 L 1067.3333333333335 604 L 1057.3333333333335 612" fill="none" stroke="#176c70" stroke-width="3"/>
+<rect x="1075.3333333333335" y="515" width="460.6666666666667" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="1095.3333333333335" y="563" font-size="27" fill="#172438" font-weight="700">Stage completion</text>
+<text x="1095.3333333333335" y="600" font-size="24" fill="#172438">Check release criteria</text>
+<rect x="64" y="785" width="1472" height="70" rx="12" fill="#e3edf2"/>
+<text x="86" y="829" font-size="25" fill="#172438">Recorded trajectory replay in Isaac Sim; render rotation adjusted.</text>
+</g></svg>

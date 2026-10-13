@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<g font-family="Arial, sans-serif">
+<text x="64" y="90" font-size="46" fill="#172438" font-weight="700">Camera calibration and joint replay</text>
+<text x="64" y="148" font-size="28" fill="#172438">Calibration residuals and simulated joint tracking describe different checks.</text>
+<text x="64" y="210" font-size="26" fill="#176c70" font-weight="700">CAMERA AND SCENE</text>
+<rect x="64.0" y="230" width="460.6666666666667" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="84.0" y="278" font-size="27" fill="#172438" font-weight="700">Kinect depth + markers</text>
+<text x="84.0" y="315" font-size="24" fill="#172438">Camera-robot transform</text>
+<rect x="569.6666666666667" y="230" width="460.6666666666667" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="589.6666666666667" y="278" font-size="27" fill="#172438" font-weight="700">Depth observations</text>
+<text x="589.6666666666667" y="315" font-size="24" fill="#172438">Estimate table plane</text>
+<rect x="1075.3333333333335" y="230" width="460.6666666666667" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="1095.3333333333335" y="278" font-size="27" fill="#172438" font-weight="700">URDF + camera view</text>
+<text x="1095.3333333333335" y="315" font-size="24" fill="#172438">Build an Isaac Sim twin</text>
+<text x="64" y="495" font-size="26" fill="#176c70" font-weight="700">RECORDED JOINT REPLAY</text>
+<rect x="64.0" y="515" width="334.25" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="84.0" y="563" font-size="27" fill="#172438" font-weight="700">Recorded arm joints</text>
+<text x="84.0" y="600" font-size="24" fill="#172438">Replay targets</text>
+<path d="M 406.25 604 H 435.25 M 425.25 596 L 435.25 604 L 425.25 612" fill="none" stroke="#176c70" stroke-width="3"/>
+<rect x="443.25" y="515" width="334.25" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="463.25" y="563" font-size="27" fill="#172438" font-weight="700">Isaac Sim joints</text>
+<text x="463.25" y="600" font-size="24" fill="#172438">Track target angles</text>
+<path d="M 785.5 604 H 814.5 M 804.5 596 L 814.5 604 L 804.5 612" fill="none" stroke="#176c70" stroke-width="3"/>
+<rect x="822.5" y="515" width="334.25" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="842.5" y="563" font-size="27" fill="#172438" font-weight="700">Per-episode joint RMSE</text>
+<text x="842.5" y="600" font-size="24" fill="#172438">Mean: 0.43°</text>
+<path d="M 1164.75 604 H 1193.75 M 1183.75 596 L 1193.75 604 L 1183.75 612" fill="none" stroke="#176c70" stroke-width="3"/>
+<rect x="1201.75" y="515" width="334.25" height="178" rx="16" fill="#ffffff" stroke="#a8bacb" stroke-width="2"/>
+<text x="1221.75" y="563" font-size="27" fill="#172438" font-weight="700">Simulation replay</text>
+<text x="1221.75" y="600" font-size="24" fill="#172438">45 episodes</text>
+<text x="1221.75" y="637" font-size="24" fill="#172438">6,331 frames</text>
+<rect x="64" y="785" width="1472" height="70" rx="12" fill="#e3edf2"/>
+<text x="86" y="829" font-size="25" fill="#172438">Marker-based RMSE: 10.13 mm | 27 of 31 poses | MARGINAL: acceptable for simulation pipeline.</text>
+</g></svg>
