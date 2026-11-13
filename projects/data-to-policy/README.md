@@ -34,4 +34,16 @@ This work highlighted the need to check pose coverage and the initial movement w
 
 ![Pose coverage and recording-start checks in the collection workflow](images/collection-change.png)
 
+## Run it
+
+From the repository root, after `pip install -e .`:
+
+```
+python -m roarm_tools.episodes examples/data/replay_tracking.csv --plot joints.png
+```
+
+`examples/data/replay_tracking.csv` holds the follower joint angles of the final 50 episodes (6,942 frames); its per-joint mean, standard deviation, minimum, and maximum match the dataset statistics. The command applies the recorder's start-pose and save checks to each episode and prints the joint distribution. All 50 episodes start within 30° of the home pose; one episode gets a warning that the shoulder was below 30° when the gripper closed. The two height checks need the end-effector height reported by the arm, which the sample does not contain, so they are skipped.
+
+Recording needs a RoArm-M3 leader-follower pair and an Azure Kinect. The recorder itself is not in this repository; `roarm_tools.episodes` holds the checks it applies.
+
 [Portfolio](../../README.md)

@@ -60,8 +60,29 @@ The replay shows the object still held when the task requires release; the rotat
 
 [Policy failure analysis](projects/policy-failure-analysis/README.md)
 
-## Research code and discussion
+## Code
 
-Research code remains private. I can discuss the collection workflow, calibration procedure, and failure analysis in an interview.
+`src/roarm_tools` holds the offline parts of the calibration and data-collection work, with small samples taken from the original recordings in `examples/data`. No robot, camera, or simulator is needed to run them.
 
-For content reuse, see [LICENSE.md](LICENSE.md).
+```
+python -m venv .venv && .venv/Scripts/activate   # source .venv/bin/activate on Linux/macOS
+pip install -e .[test]
+python -m roarm_tools.handeye examples/data/handeye_captures.json
+```
+
+| Command | What it does | Sample input |
+|---|---|---|
+| `python -m roarm_tools.handeye examples/data/handeye_captures.json` | Camera-to-robot calibration from wrist-marker observations; prints the RMSE and rejected poses | 31 marker captures |
+| `python -m roarm_tools.replay examples/data/replay_tracking.csv` | Joint RMSE between recorded joint targets and simulated joints | 50 episodes, 6,942 frames |
+| `python -m roarm_tools.episodes examples/data/replay_tracking.csv --plot joints.png` | Start-pose and save checks from the recorder, and the joint distribution of the dataset | same file |
+| `python -m roarm_tools.table_plane <recordings> --calib <calib.yaml>` | Table plane from depth frames; needs `pip install -e .[table]` and Kinect recordings (not included) | none |
+| `pytest` | Checks the solvers on synthetic data and the sample outputs against the numbers above | |
+
+Not included: the hardware recorder, the marker capture script, the Isaac Sim replay and the PPO environment. They need a RoArm-M3 leader-follower pair, an Azure Kinect, or Isaac Sim and Isaac Lab, and stay in the private repository. The project pages describe what each produced.
+
+Code written with Claude Code and Codex, reviewed and tested by the author.
+
+## Licenses
+
+- Code (`src/`, `tests/`, `pyproject.toml`) is under the MIT license in [LICENSE](LICENSE).
+- Writing, diagrams, photos, videos, and the sample data in `examples/data` are covered by [LICENSE.md](LICENSE.md); no reuse license is granted for them.

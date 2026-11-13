@@ -30,4 +30,8 @@ The replay shows the object still held when the task requires release; the rotat
 
 The analysis highlighted the need to inspect the reward, stage-completion checks, and observed action separately.
 
+## Run it
+
+No runnable code is included for this project. The recorded PPO trajectories are not in this repository, and the Isaac Lab environment and replay need Isaac Sim.
+
 [Portfolio](../../README.md)
