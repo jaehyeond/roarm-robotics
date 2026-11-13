@@ -2,6 +2,12 @@
 
 I collect robot demonstrations, calibrate cameras, and inspect robot behavior on hardware and in simulation.
 
+| | |
+|---|---|
+| [![Real-arm sponge grasp, run A](media/sponge-pick-20260414-a.gif)](media/videos/sponge-pick-20260414-a.mp4) | [![Real-arm sponge grasp, run B](media/sponge-pick-20260414-b.gif)](media/videos/sponge-pick-20260414-b.mp4) |
+
+*Real RoArm-M3 grasping a sponge, two runs recorded on 2026-04-14 (previews at 1.5x speed; click for the full video). The person's face is blurred.*
+
 ![Fine-tuned SmolVLA grasping a sponge on a real arm](media/smolvla-grasp.gif)
 
 *Fine-tuned SmolVLA on a real arm. Success rate not measured.*
