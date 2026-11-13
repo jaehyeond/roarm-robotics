@@ -36,6 +36,10 @@ The final dataset contains 50 episodes and 6,942 frames, with a dataset sampling
 
 Replaying real-arm recordings required separate checks of the camera transform, table plane, and joint tracking. I used Azure Kinect, calibration markers, and Python to estimate the camera-to-robot transform and table plane, then built an Isaac Sim twin from the URDF and camera viewpoint. I compared recorded joint targets with the simulated joints during replay.
 
+![Candidate marker spots annotated on a recorded RoArm-M3 frame](projects/calibration-and-twin/images/marker-placement.jpg)
+
+*Candidate marker spots on the wrist, annotated on a recorded camera frame.*
+
 The marker-based calibration RMSE was 10.13 mm using 27 of 31 poses, rated **MARGINAL**, acceptable for the simulation pipeline. Simulation replay yielded a mean per-episode joint RMSE of 0.43° across 45 episodes and 6,331 frames, measured between target and simulated joint angles. These checks separate calibration residuals, visual differences, and joint replay error.
 
 [Calibration and replay workflow](projects/calibration-and-twin/README.md)
@@ -47,6 +51,10 @@ The marker-based calibration RMSE was 10.13 mm using 27 of 31 poses, rated **MAR
 *Recorded trajectory replay in Isaac Sim; render rotation adjusted.*
 
 An Isaac Lab PPO policy grasped the object but remained near the target with the jaws closed. I compared training metrics with recorded trajectories and classified the failure behavior.
+
+![Isaac Lab frames of release-stage PPO policies with the sponge still in the gripper](projects/policy-failure-analysis/images/release-policy-frames.jpg)
+
+*Isaac Lab frames from release-stage PPO policies: the sponge stays in the gripper.*
 
 The replay shows the object still held when the task requires release; the rotation adjustment affects the displayed render. The analysis highlighted the need to inspect the reward, stage-completion checks, and observed action separately.
 
