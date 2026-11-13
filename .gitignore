@@ -18,3 +18,4 @@ scratch/
 .serena/
 .codex/
 .claude/
+!media/videos/*.mp4
